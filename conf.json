@@ -1,0 +1,27 @@
+{
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": ["jsdoc"]
+  },
+  "source": {
+    "include": ["./"],
+    "includePattern": ".+\\.js$",
+    "exclude": ["./node_modules/","./docs/"]
+  },
+  "plugins": [],
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": true,
+    "footer": "Created by Jonas Buerger",
+    "copyright": "2018",
+    "linenums": true,
+    "collapseSymbols": true,
+    "inverseNav": false
+  },
+  "opts": {
+    "encoding": "utf8",
+    "destination": "./docs/js",
+    "recurse": true
+  },
+  "recurseDepth": 10
+}

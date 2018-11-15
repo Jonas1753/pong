@@ -1,0 +1,22 @@
+{
+  "name": "Uebung_2",
+  "version": "1.0.0",
+  "author":{
+    "name": "Jonas Bürger",
+    "email":"unda.jo@googlemail.com"
+  },
+  "config": {
+    "port": "80"
+  },
+  "dependencies": {
+    "jsdoc": "^3.5.5",
+    "node-static": "^0.7.11"
+  },
+  "files": [
+    "./src/*",
+    "./index.html",
+    "server.js",
+    "README.md"
+  ],
+  "license": "MIT"
+}
