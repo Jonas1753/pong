@@ -1,6 +1,6 @@
 {
   "name": "pong",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Jonas Bürger <unda.jo@googlemail.com>",
   "config": {
     "port": "80"
@@ -29,12 +29,9 @@
   "directories": {
     "doc": "docs"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Jonas1753/pong.git"
-  },
   "bugs": {
     "url": "https://github.com/Jonas1753/pong/issues"
   },
-  "homepage": "https://github.com/Jonas1753/pong#readme"
+  "homepage": "https://github.com/Jonas1753/pong#readme",
+  "devDependencies": {}
 }
