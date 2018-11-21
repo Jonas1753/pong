@@ -1,9 +1,11 @@
 'use strict';
-let c = document.getElementById("PlayArea");
-let ctx = c.getContext("2d");
+const c = document.getElementById("PlayArea");
+const ctx = c.getContext("2d");
 let fontSize = 0;
+c.width = 800;
+c.height = 600;
 resizeCanvas();
-let ball = {
+const ball = {
     "pos": { "x": c.width / 2, "y": c.height / 2 },
     "dir": { "x": 0, "y": 0 },
     "size": 20,
@@ -11,11 +13,11 @@ let ball = {
     "startSpeed": 10,
     "speedIncrease": .5
 };
-let score = {
+const score = {
     "left": 0,
     "right": 0
 };
-let player = {
+const player = {
     "left": {
         "y": 0
     },
@@ -29,7 +31,7 @@ let player = {
     "dist": 30,
     "speed": 8
 };
-let inputs = {
+const inputs = {
     "w": 0,
     "s": 0,
     "up": 0,
@@ -85,18 +87,17 @@ function resizeCanvas() {
     c.width = window.innerWidth;
     fontSize = c.height / 8;
     ctx.textBaseline = "bottom";
-    ctx.font = fontSize + "px Courier";
+    ctx.font = fontSize + 'px "Press Start 2P"';
 }
 function draw() {
     ctx.fillStyle = "#000";
     ctx.fillRect(0, 0, c.width, c.height);
     ctx.fillStyle = "#fff";
-    ctx.textAlign = "right";
-    ctx.fillText(`${score.left}`, c.width / 2, fontSize);
     ctx.textAlign = "left";
-    ctx.fillText(`${score.right}`, c.width / 2, fontSize);
-    ctx.fillRect(c.width / 2, 0, 1, fontSize);
-    ctx.fillRect(ball.pos.x - ball.size, ball.pos.y - ball.size, ball.size, ball.size);
+    ctx.fillText(`${score.right}`, fontSize * 2, fontSize);
+    ctx.textAlign = "right";
+    ctx.fillText(`${score.left}`, c.width - fontSize * 2, fontSize);
+    ctx.fillRect(ball.pos.x - ball.size / 2, ball.pos.y - ball.size / 2, ball.size, ball.size);
     ctx.fillRect(player.dist, player.left.y, player.size.w, player.size.h);
     ctx.fillRect(c.width - player.dist, player.right.y, player.size.w, player.size.h);
 }
