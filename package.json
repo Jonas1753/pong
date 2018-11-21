@@ -8,6 +8,10 @@
   "config": {
     "port": "80"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jonas1753/pong.git"
+  },
   "dependencies": {
     "jsdoc": "^3.5.5",
     "node-static": "^0.7.11"
